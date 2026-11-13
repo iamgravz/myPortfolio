@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catherine G. Bencito · IT Student &amp; Web Developer</title>
+<meta name="description" content="Catherine G. Bencito (Gravz) — full-stack developer and BSIT student at PUP Open University System, building document tracking, records and management systems for real institutions.">
+<meta name="author" content="Catherine G. Bencito">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Catherine G. Bencito — IT Student and Web Developer">
+<meta property="og:description" content="I build systems that track what happens next: document tracking, records and management systems for schools, organizations and barangays.">
+<meta name="theme-color" content="#7B1E2B">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%237B1E2B'/><text x='16' y='21' font-family='Arial' font-weight='700' font-size='13' fill='white' text-anchor='middle'>CB</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>
+  document.documentElement.classList.add('js');
+  /* set theme before paint to avoid a flash */
+  try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; else if (matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.dataset.theme = 'dark'; } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Catherine G. Bencito",
+  "alternateName": "Gravz",
+  "jobTitle": "IT Support and Web Developer",
+  "email": "mailto:kyasarin004@gmail.com",
+  "alumniOf": "Polytechnic University of the Philippines",
+  "sameAs": ["https://github.com/iamgravz", "https://www.linkedin.com/in/catherine-bencito-67b888121/"]
+}
+</script>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="#main" aria-label="Catherine G. Bencito, back to top"><span class="brand-mark" aria-hidden="true">CB</span><span class="brand-name">Catherine G. Bencito</span></a>
+    <div class="nav-right">
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li class="opt"><a href="#skills">Skills</a></li>
+          <li class="opt2"><a href="#experience">Experience</a></li>
+          <li class="opt"><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+      <div class="hero-text">
+      <h1>I build systems that know what happens next.</h1>
+      <p class="lede">I'm <strong>Catherine "Gravz" Bencito</strong>, an Information Technology student at the <strong>PUP Open University System</strong> in the Philippines. After more than ten years in live casino operations, from dealer to pit boss, I now build web systems for real offices: document tracking for a university registrar, records for a barangay health center, membership and welfare tools for a student organization.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#work">See my projects</a>
+        <a class="btn ghost" href="mailto:kyasarin004@gmail.com">Email me</a>
+        <a class="btn ghost" href="https://github.com/iamgravz" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="assets/img/catherine-half.webp" width="640" height="800" alt="Catherine G. Bencito">
+        <figcaption><span class="dot-live" aria-hidden="true"></span>Open to IT support and web roles</figcaption>
+      </figure>
+      </div>
+
+      <!-- Signature element: a working slice of PDTS -->
+      <div class="demo" aria-labelledby="demoTitle">
+        <div class="demo-bar">
+          <span><b id="demoTitle">Try PDTS</b>, the document tracker I led</span>
+          <span class="pill">Live demo · sample data</span>
+        </div>
+        <div class="demo-body">
+          <form class="demo-form" id="trackForm" autocomplete="off">
+            <div class="field">
+              <label for="refInput">Tracking reference</label>
+              <input id="refInput" name="ref" value="PDTS-2026-0142" spellcheck="false" aria-describedby="sampleHint">
+            </div>
+            <button class="btn primary" type="submit">Track submission</button>
+          </form>
+          <div class="samples" id="sampleHint">
+            <span>Sample references:</span>
+            <button type="button" data-ref="PDTS-2026-0142">PDTS-2026-0142</button>
+            <button type="button" data-ref="PDTS-2026-0157">PDTS-2026-0157</button>
+            <button type="button" data-ref="PDTS-2026-0163">PDTS-2026-0163</button>
+          </div>
+
+          <p class="demo-error" id="demoError" role="alert" hidden></p>
+
+          <div class="result" id="result" aria-live="polite" hidden>
+            <div class="result-head">
+              <div>
+                <h3 id="resultRef"></h3>
+                <div class="meta" id="resultMeta"></div>
+              </div>
+              <span class="status" id="resultStatus"></span>
+            </div>
+            <div class="steps" id="resultSteps"></div>
+            <div class="result-cols">
+              <div class="panel">
+                <h4>Requirement checklist</h4>
+                <ul class="checklist" id="resultChecklist"></ul>
+              </div>
+              <div class="panel">
+                <h4>Email sent to the student</h4>
+                <div class="email" id="resultEmail"></div>
+              </div>
+            </div>
+          </div>
+          <p class="demo-foot">In the real system, registrar staff log each submission, tick documents against a checklist template for its purpose, and PDTS emails the student a process slip at every change.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORK ================= -->
+  <section class="block" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Selected work</h2>
+        <p>Most of what I build starts as a paper process: forms, logbooks, spreadsheets. My job is to turn it into a system people can rely on.</p>
+      </div>
+
+      <article class="feature">
+        <div class="feature-body">
+          <span class="role">Project Leader · Web + Android</span>
+          <h3>PDTS: PUP OUS Document Tracking and Submission System</h3>
+          <p>A full-stack system for the PUP Open University System Registrar's Office that runs in the browser and as an installable Android app (APK) for tablets. Staff log student document submissions, check them against requirement checklists, and send students status updates automatically.</p>
+          <ul class="ticks">
+            <li>Role-based access for Registrar Officers and Head Admins</li>
+            <li>Checklist templates for admission, masteral, comprehensive exam and deficiency requirements</li>
+            <li>Automatic email notifications with printable process slips and tracking references</li>
+            <li>Read-only audit log of every staff action, with bcrypt-hashed accounts</li>
+            <li>Android APK built with Capacitor, so staff can log submissions on a tablet at the counter</li>
+          </ul>
+        </div>
+        <div class="feature-side">
+          <div>
+            <h4>Built with</h4>
+            <div class="stack">
+              <span>React 19</span><span>TypeScript</span><span>Vite</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>Drizzle ORM</span><span>Tailwind CSS</span><span>Nodemailer</span><span>Capacitor</span><span>Android (APK)</span>
+            </div>
+          </div>
+          <div>
+            <h4>What I led</h4>
+            <p style="margin-top:8px;opacity:.92">The team from requirements to defense: system analysis and design, ERD and database structure, HTTPS setup, the Android APK build, deployment and technical documentation.</p>
+          </div>
+          <div class="links">
+            <button class="btn primary small" type="button" data-case="case-pdts">Read case study</button>
+            <a class="btn ghost small" href="https://github.com/iamgravz/pdts-demo-clean" target="_blank" rel="noopener">View code</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="projects">
+        <article class="proj">
+          <h3>AGILE OUS Membership and Student Welfare System</h3>
+          <div class="kind">Student organization · In development</div>
+          <p>A system for the Membership and Student Welfare committee of AGILE OUS, the IT student guild of PUP OUS. It replaces a Google Forms and Sheets process for applications, interviews, evaluations and acceptance emails.</p>
+          <div class="tags"><span>HTML/CSS/JS</span><span>PHP</span><span>MySQL</span></div>
+          <button class="btn ghost small" type="button" data-case="case-msw">Read case study</button>
+        </article>
+        <article class="proj">
+          <h3>Barangay Health Center Management System</h3>
+          <div class="kind">Community health · Web app</div>
+          <p>Patient records and consultation management for a barangay health center. Completing a consultation creates the patient's health record automatically, so staff stop writing the same details twice.</p>
+          <div class="tags"><span>HTML/CSS/JS</span><span>Responsive UI</span><span>Records management</span></div>
+          <button class="btn ghost small" type="button" data-case="case-bhcms">Read case study</button>
+        </article>
+        <article class="proj">
+          <h3>RestroBit Restaurant POS</h3>
+          <div class="kind">Point of sale · Full stack</div>
+          <p>A restaurant point-of-sale system with a Node.js and Express backend in MVC architecture over MySQL, and a front end used as the basis for a UI/UX final project.</p>
+          <div class="tags"><span>Node.js</span><span>Express</span><span>MySQL</span><span>MVC</span></div>
+        </article>
+        <article class="proj">
+          <h3>Create Print</h3>
+          <div class="kind">Progressive web app</div>
+          <p>A PWA that prints to pocket 58mm Bluetooth thermal printers by generating ESC/POS commands directly in the browser. No native app needed.</p>
+          <div class="tags"><span>JavaScript</span><span>Web Bluetooth</span><span>ESC/POS</span><span>PWA</span></div>
+        </article>
+      </div>
+
+      <div class="small-builds">
+        <h3>Smaller builds and coursework</h3>
+        <dl>
+          <dt>StudentOS</dt><dd>Academic tracker with local storage and AI-assisted study features.</dd>
+          <dt>KAB'S POS</dt><dd>Single-page restaurant ordering and checkout interface.</dd>
+          <dt>Database design</dt><dd>ERDs in Chen and crow's foot notation; schema audits for normalization and constraints.</dd>
+          <dt>Java and OOP</dt><dd>Spring Boot scheduling, JWT authentication and OOP fundamentals.</dd>
+        </dl>
+      </div>
+
+      <div class="gh">
+        <div class="gh-head">
+          <h3>Latest on GitHub</h3>
+          <span>Pulled live from the GitHub API</span>
+        </div>
+        <ul class="gh-list" id="ghList" data-user="iamgravz">
+          <li><span class="loading">Loading repositories…</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="block" id="skills">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Skills</h2>
+        <p>The tools I've shipped real projects with, from the database schema to the screen.</p>
+      </div>
+      <div class="skills">
+        <div><h3>Front end</h3><ul><li>React and TypeScript</li><li>HTML, CSS, JavaScript</li><li>Tailwind CSS</li><li>Vite</li><li>Responsive and tablet UI</li></ul></div>
+        <div><h3>Back end</h3><ul><li>Node.js and Express</li><li>Java and Spring Boot</li><li>PHP</li><li>REST APIs</li><li>Authentication and RBAC</li><li>Email services</li></ul></div>
+        <div><h3>Data</h3><ul><li>PostgreSQL</li><li>MySQL and MariaDB</li><li>Drizzle ORM</li><li>ERD and normalization</li><li>Schema design and audits</li></ul></div>
+        <div><h3>Delivery</h3><ul><li>Git and GitHub</li><li>HTTPS and SSL setup</li><li>Apache Tomcat</li><li>Capacitor for Android</li><li>System analysis and design docs</li><li>AI tools and prompt design</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="block" id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Experience and leadership</h2>
+        <p>More than ten years in live casino operations, from dealer to pit boss, taught me accuracy, accountability and calm under pressure. I bring the same habits to the systems I build.</p>
+      </div>
+
+      <h3 class="sub">Work experience</h3>
+      <ol class="timeline">
+        <li>
+          <div class="when">Nov 2021 to 2024</div>
+          <h3>Pit Boss</h3>
+          <div class="org">DB Live Casino · Mandaluyong, Metro Manila</div>
+          <p>Supervised dealers and table games during my shift, checked that games and payouts were correct, handled player disputes on the floor, and fixed the MD3 machines on the tables when they malfunctioned.</p>
+        </li>
+        <li>
+          <div class="when">Jan 2013 to Mar 2021</div>
+          <h3>VIP Online Casino Dealer</h3>
+          <div class="org">Intevalue Services Inc. · PBCom Tower, Makati City</div>
+          <p>Dealt table games for VIP players on a live online stream, supervised play and checked hands for winnings.</p>
+        </li>
+      </ol>
+
+      <h3 class="sub">Projects and leadership</h3>
+      <ol class="timeline">
+        <li>
+          <div class="when">2026 to present</div>
+          <h3>Head, Membership and Student Welfare Committee</h3>
+          <div class="org">AGILE OUS · Academic Guild of IT Learners and Experts (new organization, being formed)</div>
+          <p>Will handle applicant interviews, evaluations and member concerns. Helping set up the organization and its membership process, and building the committee's system with one groupmate.</p>
+        </li>
+        <li>
+          <div class="when">PUP Open University System</div>
+          <h3>Project Leader, PDTS</h3>
+          <div class="org">Document Tracking and Submission System</div>
+          <p>Led the design, development, deployment and defense of PDTS, the registrar's document tracking system, as a web app and an Android APK for tablets.</p>
+        </li>
+        <li>
+          <div class="when">PUP Open University System</div>
+          <h3>Panel Examiner, Information Management Defenses</h3>
+          <div class="org">Student system defenses</div>
+          <p>Reviewed student database systems, prepared defense questions and audited schemas for normalization and constraint issues.</p>
+        </li>
+      </ol>
+
+      <h3 class="sub space">Education</h3>
+      <div class="edu-list">
+        <div class="edu">
+          <div>
+            <h3>Bachelor of Science in Information Technology</h3>
+            <p>Polytechnic University of the Philippines, Open University System</p>
+          </div>
+          <p>Sep 2024 to present</p>
+        </div>
+        <div class="edu">
+          <div>
+            <h3>Associate's Degree in Information Technology</h3>
+            <p>Datamex Institute of Computer Technology</p>
+          </div>
+          <p>2011 to 2012</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICATIONS ================= -->
+  <section class="block" id="certifications">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Certifications</h2>
+        <p>Formal training in programming, design and applied AI, alongside my degree.</p>
+      </div>
+      <div class="certs">
+        <div class="cert"><div class="issuer">Google · Mar 2026</div><h3>Google AI Essentials Specialization</h3><p>Credential ID XPQ0XWKFZRQA</p></div>
+        <div class="cert"><div class="issuer">Google · Mar 2026</div><h3>Google Prompting Essentials Specialization</h3><p>Credential ID K4T7NL6RTA2X</p></div>
+        <div class="cert"><div class="issuer">Cisco Networking Academy · Apr 2025</div><h3>Python Essentials 1</h3></div>
+        <div class="cert"><div class="issuer">TESDA · Mar 2025</div><h3>Introduction to Visual Graphic Design</h3></div>
+      </div>
+      <div class="cert-courses">
+        <h3>Courses completed in the Google specializations (Mar 2026)</h3>
+        <ul>
+          <li>Introduction to AI</li>
+          <li>Maximize Productivity With AI Tools</li>
+          <li>Discover the Art of Prompting</li>
+          <li>Use AI Responsibly</li>
+          <li>Stay Ahead of the AI Curve</li>
+          <li>Start Writing Prompts like a Pro</li>
+          <li>Design Prompts for Everyday Work Tasks</li>
+          <li>Speed Up Data Analysis and Presentation Building</li>
+          <li>Use AI as a Creative or Expert Partner</li>
+        </ul>
+        <p class="also">Also: Java Programming NC III training at C&amp;C Academy (TESDA program), with OJT and certificate to follow; Home-Based Connect certificate, Feb 2021.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Have a process that needs a system?</h2>
+      <p>I'm open to junior developer roles, internships and freelance projects. Email me at <a href="mailto:kyasarin004@gmail.com">kyasarin004@gmail.com</a> or message me on LinkedIn.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:kyasarin004@gmail.com">Email me</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/catherine-bencito-67b888121/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/iamgravz" target="_blank" rel="noopener">GitHub</a>
+        <button class="btn ghost" type="button" onclick="window.print()">Print as résumé</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="wrap">
+  <footer>
+    <span>© <span id="yr">2026</span> Catherine G. Bencito</span>
+    <span>Hand-coded in HTML, CSS and JavaScript. No templates.</span>
+  </footer>
+</div>
+
+<!-- ================= CASE STUDIES ================= -->
+<dialog class="case" id="case-pdts" aria-labelledby="case-pdts-title">
+  <div class="case-head"><h2 id="case-pdts-title">Case study: PDTS</h2><button class="case-close" type="button" aria-label="Close case study">×</button></div>
+  <div class="case-body">
+    <h3>The problem</h3>
+    <p>PUP Open University students send admission, masteral, comprehensive exam and deficiency documents to the Registrar's Office, many by courier from across the country. Tracking was manual, so students couldn't tell what had arrived or what was missing, and staff answered the same follow-up questions over and over.</p>
+
+    <h3>The solution</h3>
+    <ul>
+      <li><strong>Checklist templates per purpose.</strong> Head Admins define the required documents for each purpose; officers tick them off as they verify each one.</li>
+      <li><strong>Tracking references and process slips.</strong> Every submission gets a reference number and a printable slip.</li>
+      <li><strong>Automatic emails.</strong> Any change in a submission's status emails the student, including exactly which document is missing.</li>
+      <li><strong>Audit log.</strong> Every staff action is recorded with who, what and when, and can't be edited.</li>
+      <li><strong>Web and Android.</strong> The same React app ships as a website and, through Capacitor, as an APK for tablets at the counter.</li>
+    </ul>
+
+    <h3>Architecture</h3>
+    <div class="arch" role="img" aria-label="React client on web and Android talks to an Express API, which uses PostgreSQL and an email service">
+      <div class="col">
+        <div class="node key"><b>React + TypeScript</b><span>Web app (Vite)</span></div>
+        <div class="node key"><b>Android APK</b><span>Capacitor wrapper</span></div>
+      </div>
+      <div class="arrow" aria-hidden="true">⇄</div>
+      <div class="col">
+        <div class="node key"><b>Express API</b><span>Node.js · RBAC · bcrypt</span></div>
+      </div>
+      <div class="arrow" aria-hidden="true">⇄</div>
+      <div class="col">
+        <div class="node"><b>PostgreSQL</b><span>Drizzle ORM</span></div>
+        <div class="node"><b>Email service</b><span>Nodemailer</span></div>
+      </div>
+    </div>
+
+    <h3>Hard parts I solved</h3>
+    <ul>
+      <li><strong>Password security without breaking old accounts.</strong> Moved staff passwords to bcrypt; legacy plaintext rows are re-hashed automatically the next time that user logs in.</li>
+      <li><strong>HTTPS on a local network.</strong> Set up trusted certificates with mkcert so the registrar's machines and tablets connect securely.</li>
+      <li><strong>Android quirks.</strong> Fixed the app drawing under the status bar by configuring Capacitor's status bar plugin and Android styles.</li>
+      <li><strong>Database structure.</strong> Normalized the schema, enforced foreign keys and wrote seed and reset scripts so anyone can set it up on Windows in one step.</li>
+    </ul>
+
+    <h3>My role</h3>
+    <p>Project Leader. I led requirements gathering with the registrar, the system analysis and design documentation, the ERD and database, the full-stack build, the Android release, deployment and the final defense.</p>
+  </div>
+</dialog>
+
+<dialog class="case" id="case-msw" aria-labelledby="case-msw-title">
+  <div class="case-head"><h2 id="case-msw-title">Case study: AGILE OUS MSW System</h2><button class="case-close" type="button" aria-label="Close case study">×</button></div>
+  <div class="case-body">
+    <h3>The problem</h3>
+    <p>The Membership and Student Welfare committee acts as the organization's HR. Applications came in through Google Forms, were evaluated in shared Sheets, and acceptance or rejection emails were sent by hand, which made it easy to lose track of applicants.</p>
+    <h3>The solution</h3>
+    <ul>
+      <li>One place for applications, interview schedules, evaluation scores and decisions</li>
+      <li>Document verification for applicants, officers and members</li>
+      <li>Templated acceptance and rejection emails sent from the system</li>
+      <li>Member welfare records the committee can report on</li>
+    </ul>
+    <h3>Architecture</h3>
+    <div class="arch" role="img" aria-label="Browser front end talks to a PHP backend that uses MySQL">
+      <div class="col"><div class="node key"><b>HTML, CSS, JS</b><span>Committee dashboard</span></div></div>
+      <div class="arrow" aria-hidden="true">⇄</div>
+      <div class="col"><div class="node key"><b>PHP</b><span>Business logic and auth</span></div></div>
+      <div class="arrow" aria-hidden="true">⇄</div>
+      <div class="col"><div class="node"><b>MySQL</b><span>Members, applicants, evaluations</span></div></div>
+    </div>
+    <h3>Status</h3>
+    <p>In development as the committee head. Scheduled for presentation to the organization in December 2026, with the goal of adoption across all committees.</p>
+  </div>
+</dialog>
+
+<dialog class="case" id="case-bhcms" aria-labelledby="case-bhcms-title">
+  <div class="case-head"><h2 id="case-bhcms-title">Case study: Barangay Health Center Management System</h2><button class="case-close" type="button" aria-label="Close case study">×</button></div>
+  <div class="case-body">
+    <h3>The problem</h3>
+    <p>Barangay health centers keep patient information in logbooks and folders. Staff copy the same details into several records for every visit, and finding a patient's history takes time.</p>
+    <h3>The solution</h3>
+    <ul>
+      <li>Patient registry with search</li>
+      <li>Consultation workflow from check-in to completion</li>
+      <li>Completing a consultation generates the patient's health record automatically</li>
+      <li>Full-width, responsive layout that works on the health center's desktop and tablets</li>
+    </ul>
+    <h3>What I focused on</h3>
+    <p>Designing the flow so each step feeds the next: the data entered at check-in carries through to the consultation and into the health record without retyping. The project includes a review of related literature on health information systems from 2021 onward.</p>
+  </div>
+</dialog>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
