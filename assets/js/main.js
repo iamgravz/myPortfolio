@@ -277,3 +277,50 @@ loadRepos();
     }
   }));
 })();
+
+/* ---------- 8. Experience tabs ---------- */
+$$('[data-tabs]').forEach((root) => {
+  const tabs = $$('[role="tab"]', root);
+  const ind = $('.xp-indicator', root);
+  const horizontal = () => matchMedia('(max-width: 760px)').matches;
+  const place = (tab) => {
+    if (!ind) return;
+    if (horizontal()) { ind.style.transform = `translateX(${tab.offsetLeft}px)`; ind.style.width = `${tab.offsetWidth}px`; }
+    else { ind.style.transform = `translateY(${tab.offsetTop}px)`; ind.style.height = `${tab.offsetHeight}px`; ind.style.width = ''; }
+  };
+  const select = (tab, focus) => {
+    tabs.forEach((t) => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    place(tab);
+    if (focus) tab.focus();
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(t));
+    t.addEventListener('keydown', (e) => {
+      const keys = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 };
+      if (e.key in keys) { e.preventDefault(); select(tabs[(i + keys[e.key] + tabs.length) % tabs.length], true); }
+      if (e.key === 'Home') { e.preventDefault(); select(tabs[0], true); }
+      if (e.key === 'End') { e.preventDefault(); select(tabs[tabs.length - 1], true); }
+    });
+  });
+  const current = () => tabs.find((t) => t.getAttribute('aria-selected') === 'true') || tabs[0];
+  requestAnimationFrame(() => place(current()));
+  addEventListener('resize', () => place(current()));
+});
+
+/* ---------- 9. Screenshot lightbox ---------- */
+(() => {
+  const box = $('#lightbox');
+  if (!box) return;
+  const img = $('img', box);
+  $$('.shot-open').forEach((b) => b.addEventListener('click', () => {
+    img.src = b.dataset.full; img.alt = b.dataset.alt || '';
+    box.showModal();
+  }));
+  $('.case-close', box).addEventListener('click', () => box.close());
+  box.addEventListener('click', (e) => { if (e.target === box) box.close(); });
+})();

@@ -168,6 +168,21 @@
         </div>
       </article>
 
+      <div class="screens">
+        <figure class="shot shot-web">
+          <button type="button" class="shot-open" data-full="assets/img/pdts-web.webp" data-alt="PDTS on the web: document entry form with requirements checklist" aria-label="Enlarge web screenshot">
+            <img src="assets/img/pdts-web.webp" width="960" height="607" loading="lazy" alt="PDTS on the web: document entry form with requirements checklist">
+          </button>
+          <figcaption>Web app: logging a submission against its checklist</figcaption>
+        </figure>
+        <figure class="shot shot-tablet">
+          <button type="button" class="shot-open" data-full="assets/img/pdts-tablet.webp" data-alt="PDTS Android app running on a tablet" aria-label="Enlarge tablet screenshot">
+            <img src="assets/img/pdts-tablet.webp" width="1280" height="732" loading="lazy" alt="PDTS Android app running on a tablet">
+          </button>
+          <figcaption>Android APK on a tablet</figcaption>
+        </figure>
+      </div>
+
       <div class="projects">
         <article class="proj">
           <h3>AGILE OUS Membership and Student Welfare System</h3>
@@ -243,43 +258,61 @@
         <p>More than ten years in live casino operations, from dealer to pit boss, taught me accuracy, accountability and calm under pressure. I bring the same habits to the systems I build.</p>
       </div>
 
-      <h3 class="sub">Work experience</h3>
-      <ol class="timeline">
-        <li>
-          <div class="when">Nov 2021 to 2024</div>
-          <h3>Pit Boss</h3>
-          <div class="org">DB Live Casino · Mandaluyong, Metro Manila</div>
-          <p>Supervised dealers and table games during my shift, checked that games and payouts were correct, handled player disputes on the floor, and fixed the MD3 machines on the tables when they malfunctioned.</p>
-        </li>
-        <li>
-          <div class="when">Jan 2013 to Mar 2021</div>
-          <h3>VIP Online Casino Dealer</h3>
-          <div class="org">Intevalue Services Inc. · PBCom Tower, Makati City</div>
-          <p>Dealt table games for VIP players on a live online stream, supervised play and checked hands for winnings.</p>
-        </li>
-      </ol>
-
-      <h3 class="sub">Projects and leadership</h3>
-      <ol class="timeline">
-        <li>
-          <div class="when">2026 to present</div>
-          <h3>Head, Membership and Student Welfare Committee</h3>
-          <div class="org">AGILE OUS · Academic Guild of IT Learners and Experts (new organization, being formed)</div>
-          <p>Will handle applicant interviews, evaluations and member concerns. Helping set up the organization and its membership process, and building the committee's system with one groupmate.</p>
-        </li>
-        <li>
-          <div class="when">PUP Open University System</div>
-          <h3>Project Leader, PDTS</h3>
-          <div class="org">Document Tracking and Submission System</div>
-          <p>Led the design, development, deployment and defense of PDTS, the registrar's document tracking system, as a web app and an Android APK for tablets.</p>
-        </li>
-        <li>
-          <div class="when">PUP Open University System</div>
-          <h3>Panel Examiner, Information Management Defenses</h3>
-          <div class="org">Student system defenses</div>
-          <p>Reviewed student database systems, prepared defense questions and audited schemas for normalization and constraint issues.</p>
-        </li>
-      </ol>
+      <div class="xp" data-tabs>
+        <div class="xp-list" role="tablist" aria-label="Experience">
+          <button role="tab" id="t-pit" aria-controls="p-pit" aria-selected="true">Pit Boss</button>
+          <button role="tab" id="t-vip" aria-controls="p-vip" aria-selected="false" tabindex="-1">VIP Dealer</button>
+          <button role="tab" id="t-pdts" aria-controls="p-pdts" aria-selected="false" tabindex="-1">PDTS</button>
+          <button role="tab" id="t-agile" aria-controls="p-agile" aria-selected="false" tabindex="-1">AGILE OUS</button>
+          <button role="tab" id="t-panel" aria-controls="p-panel" aria-selected="false" tabindex="-1">Panel Examiner</button>
+          <span class="xp-indicator" aria-hidden="true"></span>
+        </div>
+        <div class="xp-panels">
+          <section role="tabpanel" id="p-pit" aria-labelledby="t-pit">
+            <h3>Pit Boss <span>@ DB Live Casino</span></h3>
+            <div class="when">Nov 2021 to 2024 · Mandaluyong City</div>
+            <ul class="ticks">
+              <li>Supervised dealers and table games during my shift</li>
+              <li>Checked that every game was run correctly and payouts were accurate</li>
+              <li>Handled player complaints and disputes on the floor</li>
+              <li>Fixed the MD3 machines on the tables when they malfunctioned</li>
+            </ul>
+          </section>
+          <section role="tabpanel" id="p-vip" aria-labelledby="t-vip" hidden>
+            <h3>VIP Online Casino Dealer <span>@ Intevalue Services Inc.</span></h3>
+            <div class="when">Jan 2013 to Mar 2021 · PBCom Tower, Makati City</div>
+            <ul class="ticks">
+              <li>Dealt table games for VIP players on a live online stream</li>
+              <li>Supervised play and checked hands for winnings</li>
+            </ul>
+          </section>
+          <section role="tabpanel" id="p-pdts" aria-labelledby="t-pdts" hidden>
+            <h3>Project Leader <span>@ PDTS, PUP Open University System</span></h3>
+            <div class="when">School project · Web and Android</div>
+            <ul class="ticks">
+              <li>Led my group from requirements to the final defense</li>
+              <li>Worked on the database, setting it up on Windows, the Android APK and the documentation</li>
+            </ul>
+          </section>
+          <section role="tabpanel" id="p-agile" aria-labelledby="t-agile" hidden>
+            <h3>Committee Head, Membership and Student Welfare <span>@ AGILE OUS</span></h3>
+            <div class="when">2026 to present · New organization, currently being formed</div>
+            <ul class="ticks">
+              <li>Will handle applicant interviews, evaluations and member concerns</li>
+              <li>Helping set up the organization and its membership process</li>
+              <li>Building the committee's system with one groupmate</li>
+            </ul>
+          </section>
+          <section role="tabpanel" id="p-panel" aria-labelledby="t-panel" hidden>
+            <h3>Panel Examiner <span>@ Information Management Defenses</span></h3>
+            <div class="when">PUP Open University System</div>
+            <ul class="ticks">
+              <li>Reviewed student database systems and prepared defense questions</li>
+              <li>Checked schemas for normalization and constraint issues</li>
+            </ul>
+          </section>
+        </div>
+      </div>
 
       <h3 class="sub space">Education</h3>
       <div class="edu-list">
@@ -444,6 +477,7 @@
 </dialog>
 
 <script src="assets/js/main.js" defer></script>
+<dialog class="lightbox" id="lightbox" aria-label="Screenshot"><button class="case-close" type="button" aria-label="Close">×</button><img alt=""></dialog>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
