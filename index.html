@@ -46,9 +46,9 @@
       <nav aria-label="Main">
         <ul>
           <li><a href="#work">Work</a></li>
-          <li class="opt"><a href="#skills">Skills</a></li>
           <li class="opt2"><a href="#experience">Experience</a></li>
-          <li class="opt"><a href="#certifications">Certifications</a></li>
+          <li class="opt"><a href="pdts.html">PDTS</a></li>
+          <li><a href="resume.html">Résumé</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -163,7 +163,7 @@
             <p class="led">The team from requirements to defense: system analysis and design, ERD and database structure, HTTPS setup, the Android APK build, deployment and technical documentation.</p>
           </div>
           <div class="links">
-            <button class="btn primary small" type="button" data-case="case-pdts">Read case study</button>
+            <a class="btn primary small" href="pdts.html">Read case study</a>
             <a class="btn ghost small" href="https://github.com/iamgravz/pdts-demo-clean" target="_blank" rel="noopener">View code</a>
           </div>
         </div>
@@ -376,7 +376,7 @@
         <button class="btn ghost" type="button" data-copy="kyasarin004@gmail.com">Copy email</button>
         <a class="btn ghost" href="https://www.linkedin.com/in/catherine-bencito/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn ghost" href="https://github.com/iamgravz" target="_blank" rel="noopener">GitHub</a>
-        <button class="btn ghost" type="button" onclick="window.print()">Print as résumé</button>
+        <a class="btn ghost" href="resume.html">View résumé</a>
       </div>
     </div>
   </section>
@@ -390,50 +390,6 @@
 </div>
 
 <!-- ================= CASE STUDIES ================= -->
-<dialog class="case" id="case-pdts" aria-labelledby="case-pdts-title">
-  <div class="case-head"><h2 id="case-pdts-title">Case study: PDTS</h2><button class="case-close" type="button" aria-label="Close case study">×</button></div>
-  <div class="case-body">
-    <h3>The problem</h3>
-    <p>PUP Open University students send admission, masteral, comprehensive exam and deficiency documents to the Registrar's Office, many by courier from across the country. Tracking was manual, so students couldn't tell what had arrived or what was missing, and staff answered the same follow-up questions over and over.</p>
-
-    <h3>The solution</h3>
-    <ul>
-      <li><strong>Checklist templates per purpose.</strong> Head Admins define the required documents for each purpose; officers tick them off as they verify each one.</li>
-      <li><strong>Tracking references and process slips.</strong> Every submission gets a reference number and a printable slip.</li>
-      <li><strong>Automatic emails.</strong> Any change in a submission's status emails the student, including exactly which document is missing.</li>
-      <li><strong>Audit log.</strong> Every staff action is recorded with who, what and when, and can't be edited.</li>
-      <li><strong>Web and Android.</strong> The same React app ships as a website and, through Capacitor, as an APK for tablets at the counter.</li>
-    </ul>
-
-    <h3>Architecture</h3>
-    <div class="arch" role="img" aria-label="React client on web and Android talks to an Express API, which uses PostgreSQL and an email service">
-      <div class="col">
-        <div class="node key"><b>React + TypeScript</b><span>Web app (Vite)</span></div>
-        <div class="node key"><b>Android APK</b><span>Capacitor wrapper</span></div>
-      </div>
-      <div class="arrow" aria-hidden="true">⇄</div>
-      <div class="col">
-        <div class="node key"><b>Express API</b><span>Node.js · RBAC · bcrypt</span></div>
-      </div>
-      <div class="arrow" aria-hidden="true">⇄</div>
-      <div class="col">
-        <div class="node"><b>PostgreSQL</b><span>Drizzle ORM</span></div>
-        <div class="node"><b>Email service</b><span>Nodemailer</span></div>
-      </div>
-    </div>
-
-    <h3>Hard parts I solved</h3>
-    <ul>
-      <li><strong>Password security without breaking old accounts.</strong> Moved staff passwords to bcrypt; legacy plaintext rows are re-hashed automatically the next time that user logs in.</li>
-      <li><strong>HTTPS on a local network.</strong> Set up trusted certificates with mkcert so the registrar's machines and tablets connect securely.</li>
-            <li><strong>Database structure.</strong> Normalized the schema, enforced foreign keys and wrote seed and reset scripts so anyone can set it up on Windows in one step.</li>
-    </ul>
-
-    <h3>My role</h3>
-    <p>Project Leader of a school project. I led the group from requirements to the final defense, and worked on the database, setting the system up on Windows, building the Android APK and the documentation.</p>
-  </div>
-</dialog>
-
 <dialog class="case" id="case-msw" aria-labelledby="case-msw-title">
   <div class="case-head"><h2 id="case-msw-title">Case study: AGILE OUS MSW System</h2><button class="case-close" type="button" aria-label="Close case study">×</button></div>
   <div class="case-body">

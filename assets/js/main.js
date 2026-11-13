@@ -29,7 +29,7 @@ $('#themeToggle')?.addEventListener('click', () => {
 /* ---------- 2. Header ---------- */
 const header = $('header.top');
 addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 8), { passive: true });
-$('#yr').textContent = new Date().getFullYear();
+const yr = $('#yr'); if (yr) yr.textContent = new Date().getFullYear();
 
 /* ---------- 3. PDTS tracking demo ----------
    Mirrors how the real PDTS works: a submission has a purpose,
@@ -223,6 +223,7 @@ loadRepos();
   const groups = [
     ['.sec-head'], ['.feature'], ['.projects .proj'], ['.small-builds'], ['.gh'],
     ['.skills > div'], ['.timeline li'], ['.edu'], ['.certs .cert'], ['.cert-courses'], ['.contact .wrap > *'],
+    ['.prose-grid'], ['.cv-sec'], ['.screens .shot'],
   ];
   groups.forEach(([sel]) => $$(sel).forEach((el, i) => {
     el.dataset.reveal = '';
