@@ -182,11 +182,17 @@ async function loadRepos() {
   if (!list) return;
   const user = list.dataset.user;
   try {
-    const res = await fetch(`https://api.github.com/users/${user}/repos?sort=pushed&per_page=6`, {
-      headers: { Accept: 'application/vnd.github+json' },
-    });
-    if (!res.ok) throw new Error(`GitHub responded ${res.status}`);
-    const repos = (await res.json()).filter((r) => !r.fork);
+    let all;
+    try { const c = JSON.parse(sessionStorage.getItem('gh-repos') || 'null'); if (c && Date.now() - c.t < 3600e3) all = c.d; } catch { /* no storage */ }
+    if (!all) {
+      const res = await fetch(`https://api.github.com/users/${user}/repos?sort=pushed&per_page=6`, {
+        headers: { Accept: 'application/vnd.github+json' },
+      });
+      if (!res.ok) throw new Error(`GitHub responded ${res.status}`);
+      all = await res.json();
+      try { sessionStorage.setItem('gh-repos', JSON.stringify({ t: Date.now(), d: all })); } catch { /* no storage */ }
+    }
+    const repos = all.filter((r) => !r.fork);
     if (!repos.length) throw new Error('No public repositories');
     const fmt = new Intl.DateTimeFormat('en-PH', { month: 'short', day: 'numeric', year: 'numeric' });
     list.innerHTML = repos.map((r) => `
@@ -316,7 +322,8 @@ $$('[data-tabs]').forEach((root) => {
 (() => {
   const box = $('#lightbox');
   if (!box) return;
-  const img = $('img', box);
+  const img = document.createElement('img');
+  box.append(img);
   $$('.shot-open').forEach((b) => b.addEventListener('click', () => {
     img.src = b.dataset.full; img.alt = b.dataset.alt || '';
     box.showModal();

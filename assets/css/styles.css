@@ -561,3 +561,4 @@ dialog.lightbox[open] { animation: rise .25s var(--ease-out); }
   .xp-list { display: none; }
   .xp-panels section[hidden] { display: block !important; margin-top: 14px; }
 }
+.feature-side .led { margin-top: 8px; opacity: .92; }
