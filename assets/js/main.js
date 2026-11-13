@@ -258,3 +258,22 @@ loadRepos();
   addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
   update();
 })();
+
+/* ---------- 7. Copy email ---------- */
+(() => {
+  const toast = $('#toast');
+  let t;
+  const show = (msg) => { if (!toast) return; toast.textContent = msg; toast.classList.add('show'); clearTimeout(t); t = setTimeout(() => toast.classList.remove('show'), 2200); };
+  $$('[data-copy]').forEach((btn) => btn.addEventListener('click', async () => {
+    const text = btn.dataset.copy;
+    try {
+      await navigator.clipboard.writeText(text);
+      show('Email copied: ' + text);
+    } catch {
+      const ta = Object.assign(document.createElement('textarea'), { value: text });
+      document.body.append(ta); ta.select();
+      try { document.execCommand('copy'); show('Email copied: ' + text); } catch { show(text); }
+      ta.remove();
+    }
+  }));
+})();
