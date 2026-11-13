@@ -562,3 +562,16 @@ dialog.lightbox[open] { animation: rise .25s var(--ease-out); }
   .xp-panels section[hidden] { display: block !important; margin-top: 14px; }
 }
 .feature-side .led { margin-top: 8px; opacity: .92; }
+
+/* headline tagline */
+.tagline {
+  display: inline-block; margin-bottom: 22px; padding: 7px 14px; border-radius: 999px;
+  font-size: 14px; font-weight: 600; color: var(--maroon-ink);
+  background: var(--glass-strong); border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  opacity: 0; animation: fade-up .8s var(--ease-out) .05s forwards;
+}
+.tagline span { color: var(--slate); margin: 0 4px; }
+@media (prefers-reduced-motion: reduce) { .tagline { animation: none; opacity: 1; } }
+@media print { .tagline { opacity: 1; animation: none; } }
+@media (max-width: 520px) { .tagline { border-radius: 14px; line-height: 1.5; } }
